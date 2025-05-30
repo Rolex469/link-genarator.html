@@ -1,1 +1,1 @@
-# link-genarator.html
+# link-generator.html
